@@ -1,3 +1,30 @@
+:root {
+    --size-1: 8px;
+    --size-2: 16px;
+    --size-3: 24px;
+    --size-4: 32px;
+    --size-5: 48px;
+    --size-6: 64px;
+    --size-7: 96px;
+    --size-8: 128px;
+
+    --font-sm: 1rem;
+    --font-normal: 1.25rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+
+    --primary: hsl(160deg, 100%, 30%);
+    --secondary-light: hsl(45deg, 100%, 50%);
+    --secondary-dark: hsl(45deg, 100%, 40%);
+
+    --white: hsl(0deg, 0%, 100%);
+    --gray-100: hsl(0deg, 0%, 60%);
+    --gray-200: hsl(0deg, 0%, 40%);
+    --gray-300: hsl(0deg, 0%, 30%);
+    --gray-400: hsl(0deg, 0%, 10%);
+    --black: hsl(0deg, 0%, 0%);
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -9,4 +36,60 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+body {
+  font-size: var(--font-normal);
+}
+
+p {
+    margin: var(--size-2) 0;
+}
+
+strong {
+    color: var(--primary);
+}
+
+header {
+    margin-top: var(--size-7);
+    padding: 0 var(--size-3);
+}
+
+.intro-chunk p {
+    max-width: 415px;
+}
+
+main {
+    margin-top: var(--size-6);
+    background-color: var(--gray-200);
+    border-top: var(--size-1) solid var(--gray-100);
+    padding: var(--size-6) 0;
+}
+
+.max-width-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: var(--font-xl);
+    font-weight: 800;
+    margin-bottom: var(--size-5);
+}
+
+.indented-heading {
+    margin-left: calc(-1 * var(--size-4));
+}
+
+.card {
+    background: var(--white);
+    padding: var(--size-3);
+    border-bottom: var(--size-1) solid var(--gray-100);
+}
+
+.card h2 {
+    width: fit-content;
+    font-size: var(--font-lg);
+    background-color: var(--secondary-light);
+    border-bottom: var(--size-1) solid var(--secondary-dark);
+    margin-top: calc(-1 * var(--size-2));
+    padding: var(--size-2) var(--size-4);
+}
